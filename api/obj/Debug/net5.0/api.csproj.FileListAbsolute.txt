@@ -1,0 +1,76 @@
+C:/Users/Sam/Documents/PXL/Security Advanced/2122/Lab Yellow Team/api/bin/Debug/net5.0/appsettings.Development.json
+C:/Users/Sam/Documents/PXL/Security Advanced/2122/Lab Yellow Team/api/bin/Debug/net5.0/appsettings.json
+C:/Users/Sam/Documents/PXL/Security Advanced/2122/Lab Yellow Team/api/bin/Debug/net5.0/api.exe
+C:/Users/Sam/Documents/PXL/Security Advanced/2122/Lab Yellow Team/api/bin/Debug/net5.0/api.deps.json
+C:/Users/Sam/Documents/PXL/Security Advanced/2122/Lab Yellow Team/api/bin/Debug/net5.0/api.runtimeconfig.json
+C:/Users/Sam/Documents/PXL/Security Advanced/2122/Lab Yellow Team/api/bin/Debug/net5.0/api.runtimeconfig.dev.json
+C:/Users/Sam/Documents/PXL/Security Advanced/2122/Lab Yellow Team/api/bin/Debug/net5.0/api.dll
+C:/Users/Sam/Documents/PXL/Security Advanced/2122/Lab Yellow Team/api/bin/Debug/net5.0/ref/api.dll
+C:/Users/Sam/Documents/PXL/Security Advanced/2122/Lab Yellow Team/api/bin/Debug/net5.0/api.pdb
+C:/Users/Sam/Documents/PXL/Security Advanced/2122/Lab Yellow Team/api/bin/Debug/net5.0/Microsoft.OpenApi.dll
+C:/Users/Sam/Documents/PXL/Security Advanced/2122/Lab Yellow Team/api/bin/Debug/net5.0/Swashbuckle.AspNetCore.Swagger.dll
+C:/Users/Sam/Documents/PXL/Security Advanced/2122/Lab Yellow Team/api/bin/Debug/net5.0/Swashbuckle.AspNetCore.SwaggerGen.dll
+C:/Users/Sam/Documents/PXL/Security Advanced/2122/Lab Yellow Team/api/bin/Debug/net5.0/Swashbuckle.AspNetCore.SwaggerUI.dll
+C:/Users/Sam/Documents/PXL/Security Advanced/2122/Lab Yellow Team/api/obj/Debug/net5.0/api.csprojAssemblyReference.cache
+C:/Users/Sam/Documents/PXL/Security Advanced/2122/Lab Yellow Team/api/obj/Debug/net5.0/api.GeneratedMSBuildEditorConfig.editorconfig
+C:/Users/Sam/Documents/PXL/Security Advanced/2122/Lab Yellow Team/api/obj/Debug/net5.0/api.AssemblyInfoInputs.cache
+C:/Users/Sam/Documents/PXL/Security Advanced/2122/Lab Yellow Team/api/obj/Debug/net5.0/api.AssemblyInfo.cs
+C:/Users/Sam/Documents/PXL/Security Advanced/2122/Lab Yellow Team/api/obj/Debug/net5.0/api.csproj.CoreCompileInputs.cache
+C:/Users/Sam/Documents/PXL/Security Advanced/2122/Lab Yellow Team/api/obj/Debug/net5.0/api.MvcApplicationPartsAssemblyInfo.cs
+C:/Users/Sam/Documents/PXL/Security Advanced/2122/Lab Yellow Team/api/obj/Debug/net5.0/api.MvcApplicationPartsAssemblyInfo.cache
+C:/Users/Sam/Documents/PXL/Security Advanced/2122/Lab Yellow Team/api/obj/Debug/net5.0/staticwebassets/api.StaticWebAssets.Manifest.cache
+C:/Users/Sam/Documents/PXL/Security Advanced/2122/Lab Yellow Team/api/obj/Debug/net5.0/staticwebassets/api.StaticWebAssets.xml
+C:/Users/Sam/Documents/PXL/Security Advanced/2122/Lab Yellow Team/api/obj/Debug/net5.0/scopedcss/bundle/api.styles.css
+C:/Users/Sam/Documents/PXL/Security Advanced/2122/Lab Yellow Team/api/obj/Debug/net5.0/api.RazorTargetAssemblyInfo.cache
+C:/Users/Sam/Documents/PXL/Security Advanced/2122/Lab Yellow Team/api/obj/Debug/net5.0/api.csproj.CopyComplete
+C:/Users/Sam/Documents/PXL/Security Advanced/2122/Lab Yellow Team/api/obj/Debug/net5.0/api.dll
+C:/Users/Sam/Documents/PXL/Security Advanced/2122/Lab Yellow Team/api/obj/Debug/net5.0/ref/api.dll
+C:/Users/Sam/Documents/PXL/Security Advanced/2122/Lab Yellow Team/api/obj/Debug/net5.0/api.pdb
+C:/Users/Sam/Documents/PXL/Security Advanced/2122/Lab Yellow Team/api/obj/Debug/net5.0/api.genruntimeconfig.cache
+C:/Users/Sam/Documents/PXL/Security Advanced/2122/Lab Yellow Team/api/bin/Debug/net5.0/CsvHelper.dll
+C:/Users/Sam/Documents/PXL/Security Advanced/2122/Lab Yellow Team/api/bin/Debug/net5.0/Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:/Users/Sam/Documents/PXL/Security Advanced/2122/Lab Yellow Team/api/bin/Debug/net5.0/Microsoft.IdentityModel.JsonWebTokens.dll
+C:/Users/Sam/Documents/PXL/Security Advanced/2122/Lab Yellow Team/api/bin/Debug/net5.0/Microsoft.IdentityModel.Logging.dll
+C:/Users/Sam/Documents/PXL/Security Advanced/2122/Lab Yellow Team/api/bin/Debug/net5.0/Microsoft.IdentityModel.Protocols.dll
+C:/Users/Sam/Documents/PXL/Security Advanced/2122/Lab Yellow Team/api/bin/Debug/net5.0/Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:/Users/Sam/Documents/PXL/Security Advanced/2122/Lab Yellow Team/api/bin/Debug/net5.0/Microsoft.IdentityModel.Tokens.dll
+C:/Users/Sam/Documents/PXL/Security Advanced/2122/Lab Yellow Team/api/bin/Debug/net5.0/Newtonsoft.Json.dll
+C:/Users/Sam/Documents/PXL/Security Advanced/2122/Lab Yellow Team/api/bin/Debug/net5.0/System.IdentityModel.Tokens.Jwt.dll
+/home/student/Documents/Security-Advanced-Yellow-Lab-start/api/bin/Debug/net5.0/appsettings.Development.json
+/home/student/Documents/Security-Advanced-Yellow-Lab-start/api/bin/Debug/net5.0/appsettings.json
+/home/student/Documents/Security-Advanced-Yellow-Lab-start/api/bin/Debug/net5.0/api.StaticWebAssets.xml
+/home/student/Documents/Security-Advanced-Yellow-Lab-start/api/bin/Debug/net5.0/api
+/home/student/Documents/Security-Advanced-Yellow-Lab-start/api/bin/Debug/net5.0/api.deps.json
+/home/student/Documents/Security-Advanced-Yellow-Lab-start/api/bin/Debug/net5.0/api.runtimeconfig.json
+/home/student/Documents/Security-Advanced-Yellow-Lab-start/api/bin/Debug/net5.0/api.runtimeconfig.dev.json
+/home/student/Documents/Security-Advanced-Yellow-Lab-start/api/bin/Debug/net5.0/api.dll
+/home/student/Documents/Security-Advanced-Yellow-Lab-start/api/bin/Debug/net5.0/api.pdb
+/home/student/Documents/Security-Advanced-Yellow-Lab-start/api/bin/Debug/net5.0/CsvHelper.dll
+/home/student/Documents/Security-Advanced-Yellow-Lab-start/api/bin/Debug/net5.0/Microsoft.AspNetCore.Authentication.JwtBearer.dll
+/home/student/Documents/Security-Advanced-Yellow-Lab-start/api/bin/Debug/net5.0/Microsoft.IdentityModel.JsonWebTokens.dll
+/home/student/Documents/Security-Advanced-Yellow-Lab-start/api/bin/Debug/net5.0/Microsoft.IdentityModel.Logging.dll
+/home/student/Documents/Security-Advanced-Yellow-Lab-start/api/bin/Debug/net5.0/Microsoft.IdentityModel.Protocols.dll
+/home/student/Documents/Security-Advanced-Yellow-Lab-start/api/bin/Debug/net5.0/Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+/home/student/Documents/Security-Advanced-Yellow-Lab-start/api/bin/Debug/net5.0/Microsoft.IdentityModel.Tokens.dll
+/home/student/Documents/Security-Advanced-Yellow-Lab-start/api/bin/Debug/net5.0/Microsoft.OpenApi.dll
+/home/student/Documents/Security-Advanced-Yellow-Lab-start/api/bin/Debug/net5.0/Newtonsoft.Json.dll
+/home/student/Documents/Security-Advanced-Yellow-Lab-start/api/bin/Debug/net5.0/Swashbuckle.AspNetCore.Swagger.dll
+/home/student/Documents/Security-Advanced-Yellow-Lab-start/api/bin/Debug/net5.0/Swashbuckle.AspNetCore.SwaggerGen.dll
+/home/student/Documents/Security-Advanced-Yellow-Lab-start/api/bin/Debug/net5.0/Swashbuckle.AspNetCore.SwaggerUI.dll
+/home/student/Documents/Security-Advanced-Yellow-Lab-start/api/bin/Debug/net5.0/System.IdentityModel.Tokens.Jwt.dll
+/home/student/Documents/Security-Advanced-Yellow-Lab-start/api/obj/Debug/net5.0/api.csproj.AssemblyReference.cache
+/home/student/Documents/Security-Advanced-Yellow-Lab-start/api/obj/Debug/net5.0/api.GeneratedMSBuildEditorConfig.editorconfig
+/home/student/Documents/Security-Advanced-Yellow-Lab-start/api/obj/Debug/net5.0/api.AssemblyInfoInputs.cache
+/home/student/Documents/Security-Advanced-Yellow-Lab-start/api/obj/Debug/net5.0/api.AssemblyInfo.cs
+/home/student/Documents/Security-Advanced-Yellow-Lab-start/api/obj/Debug/net5.0/api.csproj.CoreCompileInputs.cache
+/home/student/Documents/Security-Advanced-Yellow-Lab-start/api/obj/Debug/net5.0/api.MvcApplicationPartsAssemblyInfo.cs
+/home/student/Documents/Security-Advanced-Yellow-Lab-start/api/obj/Debug/net5.0/api.MvcApplicationPartsAssemblyInfo.cache
+/home/student/Documents/Security-Advanced-Yellow-Lab-start/api/obj/Debug/net5.0/scopedcss/bundle/api.styles.css
+/home/student/Documents/Security-Advanced-Yellow-Lab-start/api/obj/Debug/net5.0/staticwebassets/api.StaticWebAssets.Manifest.cache
+/home/student/Documents/Security-Advanced-Yellow-Lab-start/api/obj/Debug/net5.0/api.RazorTargetAssemblyInfo.cache
+/home/student/Documents/Security-Advanced-Yellow-Lab-start/api/obj/Debug/net5.0/api.csproj.CopyComplete
+/home/student/Documents/Security-Advanced-Yellow-Lab-start/api/obj/Debug/net5.0/api.dll
+/home/student/Documents/Security-Advanced-Yellow-Lab-start/api/obj/Debug/net5.0/refint/api.dll
+/home/student/Documents/Security-Advanced-Yellow-Lab-start/api/obj/Debug/net5.0/api.pdb
+/home/student/Documents/Security-Advanced-Yellow-Lab-start/api/obj/Debug/net5.0/api.genruntimeconfig.cache
+/home/student/Documents/Security-Advanced-Yellow-Lab-start/api/obj/Debug/net5.0/ref/api.dll
