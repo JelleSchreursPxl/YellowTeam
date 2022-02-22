@@ -80,6 +80,10 @@ export default {
       body: formBody
     }
 
+    const accessTokenResponse = await fetch('http://localhost:5002/connect/token', requestOptions)
+    const accessTokenJson = await accessTokenResponse.json();
+    const accessToken = accessTokenJson.access_token;
+
     //Use the access token to get what we want
     requestOptions.method = 'GET';
     requestOptions.headers = {
@@ -88,9 +92,6 @@ export default {
     };
     requestOptions.body = null;
 
-    const accessTokenResponse = await fetch('http://localhost:5002/connect/token', requestOptions)
-    const accessTokenJson = await accessTokenResponse.json();
-    const accessToken = accessTokenJson.access_token;
     console.log(accessToken);
 
     const resp = await fetch("http://localhost:5000/api/seatholders", requestOptions);
