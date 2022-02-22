@@ -80,12 +80,20 @@ export default {
       body: formBody
     }
 
+    //Use the access token to get what we want
+    requestOptions.method = 'GET';
+    requestOptions.headers = {
+      "Content-Type" : "application/json",
+      "Authorization" : "Bearer " + accessToken
+    };
+    requestOptions.body = null;
+
     const accessTokenResponse = await fetch('http://localhost:5002/connect/token', requestOptions)
     const accessTokenJson = await accessTokenResponse.json();
     const accessToken = accessTokenJson.access_token;
     console.log(accessToken);
 
-    const resp = await fetch("http://localhost:5000/api/seatholders");
+    const resp = await fetch("http://localhost:5000/api/seatholders", requestOptions);
     const json = await resp.json();
     this.data = Array.from(json, d => {
       return {

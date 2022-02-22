@@ -29,10 +29,33 @@ namespace api
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
-            services.AddCors(options => {
-            options.AddPolicy(name: corsPolicy,
+            services.AddCors(options => 
+            {
+                options.AddPolicy(name: corsPolicy,
                 builder => {
-                    builder.WithOrigins("http://localhost:8080");
+                    builder.WithOrigins("http://localhost:8080")
+                    .AllowAnyHeader()
+                    .AllowCredentials();
+                });
+            });
+
+            services.AddAuthentication("Bearer")
+                .AddJwtBearer("Bearer", options => 
+            {
+                options.Authority = "http://identity";
+                options.RequireHttpsMetadata = false;
+                options.TokenValidationParameters = new TokenValidationParameters
+                {   
+                    ValidateAudience = false
+                };
+            });
+
+            services.AddAuthorization(options => 
+            {
+                options.AddPolicy("ApiScope", policy => 
+                {
+                    policy.RequireAuthenticatedUser();
+                    policy.RequireClaim("scope", "krc-genk");
                 });
             });
         }
@@ -48,9 +71,13 @@ namespace api
             app.UseRouting();
             app.UseCors(corsPolicy);
 
+            app.UseAuthentication();
+            app.UseAuthorization();
+
             app.UseEndpoints(endpoints =>
             {
-                endpoints.MapControllers();
+                endpoints.MapControllers()
+                        .RequireAuthorization("ApiScope");
             });
         }
     }
