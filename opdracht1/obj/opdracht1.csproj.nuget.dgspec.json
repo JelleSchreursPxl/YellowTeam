@@ -1,0 +1,77 @@
+{
+  "format": 1,
+  "restore": {
+    "/home/student/Documents/Security-Advanced-Yellow-Lab-start/opdracht1/opdracht1.csproj": {}
+  },
+  "projects": {
+    "/home/student/Documents/Security-Advanced-Yellow-Lab-start/opdracht1/opdracht1.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/student/Documents/Security-Advanced-Yellow-Lab-start/opdracht1/opdracht1.csproj",
+        "projectName": "opdracht1",
+        "projectPath": "/home/student/Documents/Security-Advanced-Yellow-Lab-start/opdracht1/opdracht1.csproj",
+        "packagesPath": "/home/student/.nuget/packages/",
+        "outputPath": "/home/student/Documents/Security-Advanced-Yellow-Lab-start/opdracht1/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/student/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "CsvHelper": {
+              "target": "Package",
+              "version": "[27.2.1, )"
+            },
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[3.0.0, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[5.6.3, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/6.0.200/RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

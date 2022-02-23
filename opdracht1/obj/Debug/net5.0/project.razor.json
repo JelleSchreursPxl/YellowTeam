@@ -1,5 +1,5 @@
 {
-  "FilePath": "/home/student/Documents/Security-Advanced-Yellow-Lab-start/api/api.csproj",
+  "FilePath": "/home/student/Documents/Security-Advanced-Yellow-Lab-start/opdracht1/opdracht1.csproj",
   "Configuration": {
     "ConfigurationName": "MVC-3.0",
     "LanguageVersion": "5.0",
@@ -15616,7 +15616,7 @@
     ],
     "CSharpLanguageVersion": 900
   },
-  "RootNamespace": "api",
+  "RootNamespace": "opdracht1",
   "Documents": [],
   "SerializationFormat": "0.2"
 }
