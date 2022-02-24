@@ -1,6 +1,6 @@
 using System;
 
-namespace opdracht1
+namespace Console1
 {
     class Seatholder
     {

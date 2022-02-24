@@ -33,6 +33,16 @@ namespace IdentityServer
                         new Secret("sec-adv".Sha256())
                     },
                     AllowedScopes = { "krc-genk" }
+                },                
+                new Client
+                {
+                    ClientId = "brock-brutus",
+                    AllowedGrantTypes = GrantTypes.ClientCredentials,
+                    ClientSecrets = 
+                    {   
+                        new Secret("pikachu".Sha256())
+                    },
+                    AllowedScopes = { "krc-genk" }
                 }
             };
     }

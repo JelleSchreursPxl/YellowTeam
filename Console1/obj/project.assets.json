@@ -3799,11 +3799,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/student/Documents/Security-Advanced-Yellow-Lab-start/opdracht1/opdracht1.csproj",
+      "projectUniqueName": "/home/student/Documents/Security-Advanced-Yellow-Lab-start/Console1/opdracht1.csproj",
       "projectName": "opdracht1",
-      "projectPath": "/home/student/Documents/Security-Advanced-Yellow-Lab-start/opdracht1/opdracht1.csproj",
+      "projectPath": "/home/student/Documents/Security-Advanced-Yellow-Lab-start/Console1/opdracht1.csproj",
       "packagesPath": "/home/student/.nuget/packages/",
-      "outputPath": "/home/student/Documents/Security-Advanced-Yellow-Lab-start/opdracht1/obj/",
+      "outputPath": "/home/student/Documents/Security-Advanced-Yellow-Lab-start/Console1/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/home/student/.nuget/NuGet/NuGet.Config"

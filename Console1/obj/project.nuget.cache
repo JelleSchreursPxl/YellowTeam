@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ib9OunKE5ncV93iTDBAlR6eTS1HPEGgYRMI1e405lZUxL3pBFMo+FRn+voRtrYx2AitFVge9BZm3qRE1qhoPHA==",
+  "dgSpecHash": "PUdbugBCcEs4Pv9akadTta6hXgQRcf2wKpxQi0/HSjUCGnWjmBT3RlbZIoF0aIQUXOJcP1rKxP5TYQWDIgr52A==",
   "success": true,
-  "projectFilePath": "/home/student/Documents/Security-Advanced-Yellow-Lab-start/opdracht1/opdracht1.csproj",
+  "projectFilePath": "/home/student/Documents/Security-Advanced-Yellow-Lab-start/Console1/opdracht1.csproj",
   "expectedPackageFiles": [
     "/home/student/.nuget/packages/csvhelper/27.2.1/csvhelper.27.2.1.nupkg.sha512",
     "/home/student/.nuget/packages/microsoft.aspnetcore.authentication.jwtbearer/3.0.0/microsoft.aspnetcore.authentication.jwtbearer.3.0.0.nupkg.sha512",
