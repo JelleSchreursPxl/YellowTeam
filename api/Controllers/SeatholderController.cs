@@ -50,9 +50,9 @@ namespace api.Controllers
             }
             catch {}
             
-
+            
             //Then maybe it's the name of a city?
-            int cities = seatholders.Count(x => x.City.ToLower() == city.ToLower());
+            int cities = seatholders.Count(x => string.Equals(x.City, city, StringComparison.OrdinalIgnoreCase));
             if(cities > 0)
             {
                 return Ok(cities);

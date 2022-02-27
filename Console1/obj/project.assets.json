@@ -3794,24 +3794,31 @@
     ]
   },
   "packageFolders": {
-    "/home/student/.nuget/packages/": {}
+    "C:\\Users\\Thierry\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/student/Documents/Security-Advanced-Yellow-Lab-start/Console1/opdracht1.csproj",
+      "projectUniqueName": "C:\\git\\YellowTeam\\Console1\\opdracht1.csproj",
       "projectName": "opdracht1",
-      "projectPath": "/home/student/Documents/Security-Advanced-Yellow-Lab-start/Console1/opdracht1.csproj",
-      "packagesPath": "/home/student/.nuget/packages/",
-      "outputPath": "/home/student/Documents/Security-Advanced-Yellow-Lab-start/Console1/obj/",
+      "projectPath": "C:\\git\\YellowTeam\\Console1\\opdracht1.csproj",
+      "packagesPath": "C:\\Users\\Thierry\\.nuget\\packages\\",
+      "outputPath": "C:\\git\\YellowTeam\\Console1\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
+      ],
       "configFilePaths": [
-        "/home/student/.nuget/NuGet/NuGet.Config"
+        "C:\\Users\\Thierry\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net5.0"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -3861,7 +3868,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/6.0.200/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.405\\RuntimeIdentifierGraph.json"
       }
     }
   }

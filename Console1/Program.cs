@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Net;
+using System.Net.Http;
 using System.Text;
 using Microsoft.Extensions.Configuration;
 using Newtonsoft.Json;
@@ -10,72 +11,40 @@ namespace Console1
 {
     class Program
     {
+        public static string bearerToken;
+        public static string responseString = "";
+        public static HttpWebResponse response = null;
+
         static void Main(string[] args)
         {
-            string ResponseString = "";
-            HttpWebResponse response = null;
-            HttpWebResponse response2 = null;
-            IConfiguration Config = new ConfigurationBuilder()
-                .AddJsonFile("appSettings.json")
-                .Build();
+            IConfiguration config = new ConfigurationBuilder()
+               .AddJsonFile("appSettings.json")
+               .Build();
 
             try
             {
-                var baseURL = Config.GetSection("baseURL").Value;
-                var request = (HttpWebRequest)WebRequest.Create(baseURL + "/token");
-                // request.Accept = "application/json"; //"application/xml";
-                request.ContentType = "application/x-www-form-urlencoded";
-                request.Method = "POST";
+                GetToken(config);
 
-		        //Get credentials from config.
-                // var dusername = EncryptionService.Decrypt(Config.GetSection("credentials")["username"]);
-                // var dpassword = EncryptionService.Decrypt(Config.GetSection("credentials")["password"]);
-                // var dusername = Config.GetSection("credentials")["username"];
-                // var dpassword = Config.GetSection("credentials")["password"];
-
-                Credentials cred = new Credentials()
+                while (true)
                 {
-                    client_id = Config.GetSection("credentials")["username"],
-                    client_secret = Config.GetSection("credentials")["password"],
-                    grant_type = "client_credentials",
-                    scope = "krc-genk"
-                };
+                    Console.Write("Enter city: ");
+                    var input = Console.ReadLine();
 
-                var myContent = JsonConvert.SerializeObject(cred);
+                    var request = (HttpWebRequest)WebRequest.Create($"http://localhost:5000/api/seatholders/{input}");
+                    request.Accept = "application/json"; //"application/xml";
+                    request.Method = "GET";
 
-                var data = Encoding.ASCII.GetBytes(myContent);
+                    //Pass token in Authorization Header.
+                    request.Headers["Authorization"] = "Bearer " + bearerToken;
 
-                request.ContentType = "application/x-www-form-urlencoded";
-                request.ContentLength = data.Length;
+                    using (response = (HttpWebResponse)request.GetResponse())
+                    {
+                        responseString = new StreamReader(response.GetResponseStream()).ReadToEnd();
+                    }
 
-                using (var stream = request.GetRequestStream())
-                {
-                    stream.Write(data, 0, data.Length);
+                    Console.WriteLine(responseString);
                 }
-
-                using (response = (HttpWebResponse)request.GetResponse())
-                {
-                    ResponseString = new StreamReader(response.GetResponseStream()).ReadToEnd();
-                }
-
-		        //Get the token from the /token end-point and call another end-point.
-                Token token = JsonConvert.DeserializeObject<Token>(ResponseString);
-
-                var request2 = (HttpWebRequest)WebRequest.Create(baseURL + "/ProcessData");
-                request2.Accept = "application/json"; //"application/xml";
-                request2.Method = "POST";
-				
-		        //Pass token in Authorization Header.
-                request2.Headers["Authorization"] = "Bearer " + token.token;
-
-                using (response2 = (HttpWebResponse)request2.GetResponse())
-                {
-                    ResponseString = new StreamReader(response2.GetResponseStream()).ReadToEnd();
-                }
-
-                Console.WriteLine("Hello World, try!");
-                Console.WriteLine(ResponseString);
-                Environment.Exit(0);
+                //Environment.Exit(0);
             }
             catch (WebException ex)
             {
@@ -85,14 +54,53 @@ namespace Console1
                 if (ex.Status == WebExceptionStatus.ProtocolError)
                 {
                     response = (HttpWebResponse)ex.Response;
-                    ResponseString = "Some error occured: " + response.StatusCode.ToString();
+                    responseString = "Some error occured: " + response.StatusCode.ToString();
                 }
                 else
                 {
-                    ResponseString = "Some error occured: " + ex.Status.ToString();
+                    responseString = "Some error occured: " + ex.Status.ToString();
                 }
             }
-            Console.WriteLine("Hello World, test!");
+        }
+
+        private static void GetToken(IConfiguration config)
+        {
+            var request = (HttpWebRequest)WebRequest.Create(config.GetSection("baseURL").Value + "/token");
+            request.Accept = "application/json"; //"application/xml";
+            request.ContentType = "application/x-www-form-urlencoded";
+            request.Method = "POST";
+
+            var formString = $"client_id={config.GetSection("credentials")["username"]}&client_secret={config.GetSection("credentials")["password"]}&grant_type=client_credentials";
+            var data = Encoding.UTF8.GetBytes(formString);
+            request.ContentLength = data.Length;
+
+            // put form in request
+            Stream dataStream = request.GetRequestStream();
+            dataStream.Write(data, 0, data.Length);
+            dataStream.Close();
+
+            using (response = (HttpWebResponse)request.GetResponse())
+            {
+                responseString = new StreamReader(response.GetResponseStream()).ReadToEnd();
+            }
+
+            GetTokenFromResponse(responseString);
+        }
+
+        //Get token from response
+        private static void GetTokenFromResponse(string response)
+        {
+            string[] stringArray = response.Split(',');
+            foreach (string stringValue in stringArray)
+            {
+                if (stringValue.Contains("access_token"))
+                {
+                    //split string again to removes access_token in front of the actual token
+                    string[] stringSecondArray = stringValue.Split(':');
+                    //removes the paranthesises by using substring and assign it to member variable
+                    bearerToken = stringSecondArray[1].Substring(1, stringSecondArray[1].Length - 2);
+                }
+            }
         }
     }
 }
