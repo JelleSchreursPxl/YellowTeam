@@ -12,6 +12,8 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Authorization;
 namespace api
 {
     
@@ -39,25 +41,26 @@ namespace api
                 });
             });
 
-            services.AddAuthentication("Bearer")
-                .AddJwtBearer("Bearer", options => 
+            services.AddMvc();
+
+            var domain = "https://dev-zy3e7nf2.us.auth0.com";
+            // 1. Add Authentication Services
+            services.AddAuthentication(options =>
             {
-                options.Authority = "http://identity";
-                options.RequireHttpsMetadata = false;
-                options.TokenValidationParameters = new TokenValidationParameters
-                {   
-                    ValidateAudience = false
-                };
+                options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+                options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+            }).AddJwtBearer(options =>
+            {
+                options.Authority = domain;
+                options.Audience = "http://localhost:5000/api/";
             });
 
-            services.AddAuthorization(options => 
-            {
-                options.AddPolicy("ApiScope", policy => 
-                {
-                    policy.RequireAuthenticatedUser();
-                    policy.RequireClaim("scope", "krc-genk");
-                });
-            });
+            services.AddAuthorization();
+
+            services.AddControllers();
+
+            // Register the scope authorization handler
+            services.AddSingleton<IAuthorizationHandler, HasScopeHandler>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -76,8 +79,7 @@ namespace api
 
             app.UseEndpoints(endpoints =>
             {
-                endpoints.MapControllers()
-                        .RequireAuthorization("ApiScope");
+                endpoints.MapControllers();
             });
         }
     }

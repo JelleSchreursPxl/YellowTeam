@@ -36,6 +36,7 @@ namespace Console1
 
                     //Pass token in Authorization Header.
                     request.Headers["Authorization"] = "Bearer " + bearerToken;
+                    Console.WriteLine(bearerToken);
 
                     using (response = (HttpWebResponse)request.GetResponse())
                     {
@@ -70,7 +71,7 @@ namespace Console1
             request.ContentType = "application/x-www-form-urlencoded";
             request.Method = "POST";
 
-            var formString = $"client_id={config.GetSection("credentials")["username"]}&client_secret={config.GetSection("credentials")["password"]}&grant_type=client_credentials";
+            var formString = $"client_id={config.GetSection("credentials")["username"]}&client_secret={config.GetSection("credentials")["password"]}&grant_type=client_credentials&audience=http://localhost:5000/api/";
             var data = Encoding.UTF8.GetBytes(formString);
             request.ContentLength = data.Length;
 

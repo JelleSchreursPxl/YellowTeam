@@ -3,7 +3,7 @@
     <div class="titlebox">
       <img class="logo" alt="Genk Logo" src="../assets/logo.png" width="150"/>
       <div id="title">
-        <h1>RACING GENK</h1>
+        <h1>RACING GENK TEEEEEEST</h1>
         <p>Abonnees per gemeente met minstens <b>100</b> abonnees</p>
       </div>
     </div>
@@ -61,9 +61,10 @@ export default {
 
     //Access token
     var details = {
-      'client_id': 'dataviz',
-      'client_secret': 'sec-adv',
-      'grant_type': 'client_credentials'
+      'client_id': 'hMJXQOz0YIR61W9bo2y8B4B26l2rQa4w',
+      'client_secret': 'vDFBe4OsCg_lT3iry1gIx99kGjEJmti4HT5llPRU0AkvZDKp17-mhbBYVQPYH281',
+      'grant_type': 'client_credentials',
+      'audience': 'http://localhost:5000/api/'
     };
 
     var formBody = [];
@@ -80,7 +81,7 @@ export default {
       body: formBody
     }
 
-    const accessTokenResponse = await fetch('http://localhost:5002/connect/token', requestOptions)
+    const accessTokenResponse = await fetch('https://dev-zy3e7nf2.us.auth0.com/oauth/token', requestOptions)
     const accessTokenJson = await accessTokenResponse.json();
     const accessToken = accessTokenJson.access_token;
 

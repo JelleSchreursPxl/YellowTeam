@@ -5,6 +5,7 @@ using System.IO;
 using System.Linq;
 using CsvHelper;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Authorization;
 
 namespace api.Controllers
 {
@@ -20,6 +21,7 @@ namespace api.Controllers
         }
 
         [HttpGet]
+        [Authorize]
         public List<Seatholder> Get()
         {
             if(seatholders == null)
@@ -31,6 +33,7 @@ namespace api.Controllers
         }
 
         [Route(("{city}"))]
+        [Authorize]
         public IActionResult GetAmountOfSeatholders(string city)
         {
             if(seatholders == null)
@@ -82,6 +85,17 @@ namespace api.Controllers
                     seatholders.Add(seat);
                 }
             }
+        }
+
+        [HttpGet("claims")]
+        public IActionResult Claims()
+        {
+            return Ok(User.Claims.Select(c =>
+                new
+                {
+                    c.Type,
+                    c.Value
+                }));
         }
     }
 }

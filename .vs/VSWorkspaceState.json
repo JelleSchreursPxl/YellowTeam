@@ -2,12 +2,13 @@
   "ExpandedNodes": [
     "",
     "\\api",
+    "\\api\\Controllers",
     "\\Console1",
     "\\identityserver",
     "\\web",
     "\\web\\src",
     "\\web\\src\\views"
   ],
-  "SelectedNode": "\\identityserver",
+  "SelectedNode": "\\Console1",
   "PreviewInSolutionExplorer": false
 }
