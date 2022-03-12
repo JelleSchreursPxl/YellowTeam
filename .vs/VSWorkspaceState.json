@@ -1,14 +1,15 @@
 {
   "ExpandedNodes": [
     "",
+    "\\01-login",
     "\\api",
-    "\\api\\Controllers",
+    "\\api\\Properties",
     "\\Console1",
     "\\identityserver",
+    "\\identityserver\\Properties",
     "\\web",
-    "\\web\\src",
-    "\\web\\src\\views"
+    "\\WebApplication1"
   ],
-  "SelectedNode": "\\Console1",
+  "SelectedNode": "\\identityserver\\Dockerfile",
   "PreviewInSolutionExplorer": false
 }

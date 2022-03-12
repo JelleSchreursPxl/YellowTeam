@@ -7,10 +7,17 @@ services:
     build: ./web
     ports: 
       - "8080:80"
-  identity:
-    build: ./identityserver
-    ports:
-      - "5002:80"
-    environment:
-      ASPNETCORE_URLS: "http://+"
-      ASPNETCORE_ENVIRONMENT: "Development"
+  #identity:
+  #  build: ./identityserver
+  #  ports:
+  #    - "5002:80"
+  #  environment:
+  #    ASPNETCORE_URLS: "http://+"
+  #    ASPNETCORE_ENVIRONMENT: "Development"
+  #openid:
+  #  build: ./01-login
+  #  ports:
+  #   - "3000:80"
+  #  environment:
+  #      ASPNETCORE_URLS: "http://+"
+  #      ASPNETCORE_ENVIRONMENT: "Development"
