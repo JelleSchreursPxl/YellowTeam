@@ -7,9 +7,7 @@
     "\\Console1",
     "\\identityserver",
     "\\identityserver\\Properties",
-    "\\web",
-    "\\WebApplication1"
+    "\\web"
   ],
-  "SelectedNode": "\\identityserver\\Dockerfile",
   "PreviewInSolutionExplorer": false
 }

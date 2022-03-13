@@ -13,6 +13,7 @@ using SampleMvcApp.Support;
 using System;
 using System.Security.Claims;
 using System.Threading.Tasks;
+using Microsoft.IdentityModel.Tokens;
 
 namespace SampleMvcApp
 {
@@ -32,14 +33,17 @@ namespace SampleMvcApp
         {
             services.ConfigureSameSiteNoneCookies();
 
+            var domain = $"https://{Configuration["Auth0:Domain"]}/";
             // Add authentication services
-            services.AddAuthentication(options => {
+            services.AddAuthentication(options =>
+            {
                 options.DefaultAuthenticateScheme = CookieAuthenticationDefaults.AuthenticationScheme;
                 options.DefaultSignInScheme = CookieAuthenticationDefaults.AuthenticationScheme;
                 options.DefaultChallengeScheme = CookieAuthenticationDefaults.AuthenticationScheme;
             })
             .AddCookie()
-            .AddOpenIdConnect("Auth0", options => {
+            .AddOpenIdConnect("Auth0", options =>
+            {
                 // Set the authority to your Auth0 domain
                 options.Authority = $"https://{Configuration["Auth0:Domain"]}";
 
@@ -53,6 +57,15 @@ namespace SampleMvcApp
                 // Configure the scope
                 options.Scope.Clear();
                 options.Scope.Add("openid");
+                options.Scope.Add("advanced");
+                options.Scope.Add("basic");
+
+                // Set the correct name claim type
+                options.TokenValidationParameters = new TokenValidationParameters
+                {
+                    NameClaimType = "name",
+                    RoleClaimType = "https://schemas.quickstarts.com/roles"
+                };
 
                 // Set the callback path, so Auth0 will call back to http://localhost:3000/callback
                 // Also ensure that you have added the URL as an Allowed Callback URL in your Auth0 dashboard
@@ -89,6 +102,12 @@ namespace SampleMvcApp
                         return Task.CompletedTask;
                     }
                 };
+            });
+
+            services.AddAuthorization(options =>
+            {
+                options.AddPolicy("basic", policy => policy.Requirements.Add(new WebAPIApplication.HasScopeRequirement("basic", domain)));
+                options.AddPolicy("advanced", policy => policy.Requirements.Add(new WebAPIApplication.HasScopeRequirement("advanced", domain)));
             });
 
             services.AddMvc()

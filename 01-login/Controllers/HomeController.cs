@@ -9,7 +9,7 @@ namespace SampleMvcApp.Controllers
 {
     public class HomeController : Controller
     {
-        [Authorize]
+        [Authorize(Roles = "user,admin")]
         public async Task<IActionResult> Index()
         {
             // If the user is authenticated, then this is how you can get the access_token and id_token
@@ -17,6 +17,7 @@ namespace SampleMvcApp.Controllers
             {
                 string accessToken = await HttpContext.GetTokenAsync("access_token");
 
+                Console.WriteLine(accessToken);
                 // if you need to check the access token expiration time, use this value
                 // provided on the authorization response and stored.
                 // do not attempt to inspect/decode the access token
