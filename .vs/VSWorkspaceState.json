@@ -3,11 +3,13 @@
     "",
     "\\01-login",
     "\\api",
+    "\\api\\Controllers",
     "\\api\\Properties",
     "\\Console1",
     "\\identityserver",
     "\\identityserver\\Properties",
     "\\web"
   ],
+  "SelectedNode": "\\api\\Startup.cs",
   "PreviewInSolutionExplorer": false
 }
